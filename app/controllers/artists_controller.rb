@@ -2,7 +2,10 @@ class ArtistsController < ApplicationController
 
   def index
     @artists = Artist.all
-    @artists = Artist.search(params[:search]) unless params[:search].blank?
+  end
+
+  def show
+    @artist = Artist.find(params[:id])
   end
 
   def a_to_z
@@ -22,3 +25,9 @@ class ArtistsController < ApplicationController
 
 
 end #class
+
+private
+
+def image_params
+  params[:images].present? ? params.require(:images) : []
+end

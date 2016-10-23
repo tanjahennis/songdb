@@ -3,18 +3,9 @@
 
 <div>
   <% @artists.each do |artist| %>
-      <p><%= link_to artist.name, artist_path(artist.id) %></p>
+      <p><%= render "artist_row", artist: artist  %></p>
   <% end %>
 </div>
 
 
-<div>
-  <%= form_tag artists_path, :method => 'get' do %>
-      <p>
-        <%= text_field_tag :search, params[:search] %>
-        <%= submit_tag "Search", :name => nil %>
-      </p>
-  <% end %>
 
-
-</div>
