@@ -1,2 +1,5 @@
 <h2><%= @artist.name %></h2>
 
+<% @artist.photos.each do |photo| %>
+    <%= image_tag photo.image %>
+<% end %>
