@@ -9,4 +9,6 @@ Rails.application.routes.draw do
       get :created_at
     end
   end
+
+  resources :photos
 end
