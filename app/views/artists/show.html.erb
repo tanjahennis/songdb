@@ -1,5 +1,13 @@
 <h2><%= @artist.name %></h2>
 
-<% @artist.photos.each do |photo| %>
-    <%= image_tag photo.image %>
+<div>
+  <% @artist.photos.each do |photo| %>
+      <%= image_tag photo.image %>
+  <% end %>
+</div>
+
+<h3>Songs</h3>
+<ul><% @artist.songs.each do |song| %>
+  <li><%= song.name %></li>
 <% end %>
+</ul>
