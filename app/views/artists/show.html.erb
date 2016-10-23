@@ -11,3 +11,12 @@
   <li><%= song.name %></li>
 <% end %>
 </ul>
+
+<div>
+  <%= form_for @song do |f| %>
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+
+      <%= f.submit "Create" %>
+  <% end %>
+</div>
